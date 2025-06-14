@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAAD - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- Overlay pour les images des activités -->
+<div id="activite-overlay" class="overlay">
+    <span class="close-btn">&times;</span>
+    <div class="overlay-content">
+        <h3 id="overlay-title"></h3>
+        <div class="image-gallery"></div>
+    </div>
+</div>
+
+
+<body>
+        <!-- Devanture -->
+    <header id="devanture">
+        <!-- Vidéo en arrière-plan -->
+        <video autoplay muted loop id="header-video">
+            <source src="images/IMG_1345 2.mov" type="video/mp4">
+            <!-- Fallback image si la vidéo ne charge pas -->
+            <img src="images/fallback-bg.jpg" alt="Arrière-plan Anaïsss">
+        </video>
+        
+        <div class="header-content">
+            <h1>SAAD</h1>
+            <p class="subtitle">Portfolio de conceptions</p>
+        
+        </div>
+    </header>
+        <!-- Navigation -->
+        <nav>
+            <a href="#apropos">À propos</a>
+            <a href="#parcours">Parcours</a>
+            <a href="#projet">Projet</a>
+            <a href="#competences">Compétences</a>
+            <a href="#activites">Activités</a>
+            <a href="#fiches">Fiches</a>
+            <a href="#contact">Contact</a>     
+        </nav>
+
+        <!-- À propos -->
+    <section id="apropos">
+        <h2>À PROPOS DE MOI</h2>
+        
+        <div class="about-container">
+            <!-- Moodboard avec effet parallax -->
+            <div class="moodboard-parallax">
+                <div class="moodboard-image" style="background-image: url('images/2Moodboard (1).png')"></div>
+                <div class="moodboard-overlay">
+                    <span>Mood Board - Inspiration Créative</span>
+                </div>
+            </div>
+            
+            <!-- Bio avec effet de fondu -->
+            <div class="bio-box">
+                <div class="bio-content">
+                    <p>Moi c’est Saad, j’ai 22 ans et je suis étudiant en deuxième année de BTS Communication en alternance. Je suis quelqu’un de joyeux, sérieux, dynamique, patient, rigoureux, et j’aime transmettre la bonne humeur autour de moi.
+                        Depuis petit, je suis passionné par le sport, le cinéma et l’univers du divertissement en général. J’ai aussi développé un vrai intérêt pour la communication digitale, surtout sur les réseaux sociaux.
+                        Parce que j’aime créer, imaginer et donner vie à des idées, je me sens à ma place dans ce domaine. J’aime réfléchir à des concepts, construire des visuels, écrire des messages impactants, et faire en sorte qu’une marque touche vraiment son public.
+                        Aujourd’hui, je gère principalement les réseaux sociaux dans mon entreprise. Je m’occupe également de répondre aux commentaires, messages et avis, de produire du contenu, et de mettre en place des stratégies pour renforcer la présence en ligne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Mon parcours -->
+    <section id="parcours">
+        <h2>MON PARCOURS</h2>
+        
+        <div class="about-container">
+           
+            
+            <!-- Bio avec effet de fondu -->
+            <div class="bio-box parcours-bio-box"> <div class="bio-content">
+                    <p>Après un Bac STMG option Ressources Humaines, j’ai commencé un BTS Support à l’Action Managériale en initial. Ce cursus ne me correspondait pas, alors j’ai décidé choisi de l'arrêter à la fin de la première année.
+                        J’ai ensuite pris une année sabbatique pendant laquelle j’ai travaillé comme assistant d’éducation dans un collège à Rueil-Malmaison. Cette pause m’a permis de réfléchir à ce que je voulais vraiment faire et de confirmer mon intérêt pour la communication.
+                        Depuis, je prépare un BTS Communication en alternance, une formation qui me permet d’apprendre concrètement le métier sur le terrain tout en développant des compétences en stratégie, création de contenu, communication digitale et gestion de projet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+            <!-- Mon Projet de vie -->
+    <section id="projet">
+        <h2>MON PROJET DE VIE</h2>
+        
+        <div class="about-container">
+           
+            
+            <!-- Bio avec effet de fondu -->
+            <div class="bio-box projet-bio-box"> <div class="bio-content">
+                    <p>D'abord, plonger dans l'univers du luxe, où chaque détail raconte une histoire.
+                    Puis,  entreprendre et créer ma propre agence de communication, en Algérie d'abord, pour faire rayonner les talents et les idées avec passion et audace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                <!-- Mes Compétences -->
+    <section id="competences">
+        <h2>MES COMPÉTENCES</h2>
+        
+        <div class="competences-grid">
+            <!-- Compétence 1 -->
+            <div class="competence-card">
+                <div class="competence-image">
+                    <img src="images/adobe.png" alt="Création graphique">
+                </div>
+                <div class="competence-overlay">
+                    <h3>Adobe</h3>
+                    
+                </div>
+            </div>
+            
+            <!-- Compétence 2 -->
+            <div class="competence-card">
+                <div class="competence-image">
+                    <img src="images/canva-transparent-icon-free-png.webp" alt="Gestion de projet">
+                </div>
+                <div class="competence-overlay">
+                    <h3>Canva</h3>
+                    
+                </div>
+            </div>
+            
+            <!-- Compétence 3 -->
+            <div class="competence-card">
+                <div class="competence-image">
+                    <img src="images/72fa2bcd7989367b9940fafac6e97327.jpg" alt="Communication digitale">
+                </div>
+                <div class="competence-overlay">
+                    <h3>Capcut</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Activités -->
+    <section id="activites">
+            <h2>MES ACTIVITÉS</h2>
+            <div class="activites-grid">
+                <!-- Activité 1 -->
+                <label for="activite1-toggle" class="activite-card">
+                    <img src="images/Activité 1 (2).png" alt="Veille créative">
+                </label>
+
+            <!-- Popup Activité 1 -->
+    <input type="checkbox" id="activite1-toggle" class="popup-toggle">
+    <div class="popup-overlay">
+        <label for="activite1-toggle" class="close-btn">&times;</label>
+        <div class="popup-content">
+            <h3>Veille créative et technologique au service de la demande</h3>
+            
+            <!-- Liste des productions -->
+            <div class="productions-list">
+                <button class="production-btn" data-production="production1.1">Production1</button>
+                <button class="production-btn" data-production="production2">Production2</button>
+                <button class="production-btn" data-production="production3">Production3</button>
+            </div>
+            
+            <!-- Galeries par production -->
+            <div class="production-gallery" id="production1.1">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/White Minimal Online Marketing Steps Infographic.JPG" alt="Production 1- Image 1">
+                        </div>
+                    </div>
+            </div>
+            <div class="production-gallery" id="production2">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/production 3 fiche 1 .PNG" alt="Production 2- Image 1">
+                        </div>
+                    </div>
+                </div>
+            <div class="production-gallery" id="production3">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/IMG_0587 (1).JPG" alt="Production 3- Image 1">
+                        </div>
+                    </div>
+            </div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+                <!-- Activité 2 -->
+                <label for="activite2-toggle" class="activite-card">
+                    <img src="images/Activité 1 (3).png" alt="Création de contenus">
+                </label>
+
+                <!-- Popup Activité 2 -->
+        <input type="checkbox" id="activite2-toggle" class="popup-toggle">
+        <div class="popup-overlay">
+            <label for="activite2-toggle" class="close-btn">&times;</label>
+            <div class="popup-content">
+                <h3>Création de contenu et de solutions de communication</h3>
+
+                <!-- Liste des productions -->
+                <div class="productions-list">
+                    <button class="production-btn" data-production="production1">Production1</button>
+                    <button class="production-btn" data-production="production2.2">Production2</button>
+                    <button class="production-btn" data-production="production3.2">Production3</button>
+                    <button class="production-btn" data-production="production4.2">Production4</button>
+                    <button class="production-btn" data-production="production5.2">Production5</button>             
+                </div>
+
+                <!-- Galeries par production -->
+                 <div class="production-gallery" id="production1">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/MAGAZINE 1.png" alt="Production 1- Image 1">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/MAGAZINE 2.png" alt="Production 1- Image 2">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/MAGAZINE 3.png" alt="Production 1- Image 3">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/MAGAZINE 4.png" alt="Production 1- Image 4">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/MAGAZINE 5.png" alt="Production 1- Image 5">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/MAGAZINE 6.png" alt="Production 1- Image 6">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="production-gallery" id="production2.2">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/JPO.png" alt="Production 2- Image 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="production-gallery" id="production3.2">
+                    <div class="image-gallery">
+                      <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/Vidéo UGC .mov" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                    <div class="video-caption">Vidéo UGC</div>
+                                </video>
+                      </div>  
+                    </div>
+                </div>
+                <div class="production-gallery" id="production4.2">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/DUOLINFO.png" alt="Production 4- Image 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="production-gallery" id="production5.2">
+                    <div class="image-gallery">
+                      <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/Video 1 mercostar.MP4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption">MERCOSTAR1</div>
+                      </div>  
+                      <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/Video 2 mercostar.MP4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption">MERCOSTAR2</div>
+                      </div> 
+                      <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/Video 3 mercostar.MP4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption">MERCOSTAR3</div>
+                      </div> 
+                      <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/Video 4 mercostar.MP4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption">MERCOSTAR4</div>
+                      </div> 
+                    </div>
+                </div>
+
+            </div>  
+            
+     </div>
+                
+                <!-- Activité 3 -->
+                <label for="activite3-toggle" class="activite-card">
+                    <img src="images/Activité 1 (4).png" alt="Production et diffusion">
+                </label>
+                <!-- Popup Activité 3 -->
+        <input type="checkbox" id="activite3-toggle" class="popup-toggle">
+        <div class="popup-overlay">
+            <label for="activite3-toggle" class="close-btn">&times;</label>
+            <div class="popup-content">
+                <h3>Production et diffusion des solutions de communication</h3>
+                <!-- Liste des productions -->
+                <div class="productions-list">
+                    <button class="production-btn " data-production="production1.3">Production 1</button>
+                    <button class="production-btn" data-production="production2.3">Production 2</button>
+                    <button class="production-btn" data-production="production3.3">Production 3</button>
+                </div>
+                <!-- Galeries par production -->
+            
+                <div class="production-gallery" id="production1.3">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 1.png" alt="Production 1- Image 1">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 2.png" alt="Production 1 - Image 2">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 3.png" alt="Production 1 - Image 3">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 4.png" alt="Production 1 - Image 4">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 5.png" alt="Production 1 - Image 5">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 6.png" alt="Production 1 - Image 6">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/LOGOTYPE 7.png" alt="Production 1 - Image 7">
+                        </div>
+                    </div>
+                </div>
+                <div class="production-gallery" id="production2.3">
+                    <div class="image-gallery">  
+                        <div class="image-container">
+                                <img src="images/IMG_8904_page-0001.jpg" alt="Production 2- Image 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="production-gallery" id="production3.3">
+                    <div class="image-gallery">  
+                        <div class="image-container">
+                                <img src="images/IMG_0559.jpg" alt="Production 3- Image 1">
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>    
+            
+        </div>
+
+                <!-- Activité 4 -->
+                <label for="activite4-toggle" class="activite-card">
+                    <img src="images/Activité 1 (5).png" alt="Achat et relations">
+                </label>
+
+                <!-- Popup Activité 4 -->
+        <input type="checkbox" id="activite4-toggle" class="popup-toggle">
+        <div class="popup-overlay">
+            <label for="activite4-toggle" class="close-btn">&times;</label>
+            <div class="popup-content">
+                <h3>Achats et realtions avec des prestataires</h3>
+                <!-- Liste des productions -->
+                <div class="productions-list">
+                    <button class="production-btn " data-production="production1.4">Production 1</button>
+                    <button class="production-btn " data-production="production2.4">Production 2</button>
+                </div>
+                <!-- Galeries par production -->
+                 <div class="production-gallery" id="production1.4">
+                    <div class="image-gallery">
+                        <div class="image-container">
+                                <img src="images/SCORING 1.png" alt="Scoring- 1">
+                                
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 2.png" alt="Scoring- 2">
+                                
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 3.png" alt="Scoring- 3">
+                                
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 4.png" alt="Scoring- 4">
+                                
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 5.png" alt="Scoring- 5">
+                                
+                            </div>                    
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+
+                <!-- Activité 5 -->
+                <label for="activite5-toggle" class="activite-card">
+                    <img src="images/Activité 1 (6).png" alt="Contrôle et évaluation">
+                </label>
+
+                <!-- Popup Activité 5 -->
+    <input type="checkbox" id="activite5-toggle" class="popup-toggle">
+    <div class="popup-overlay">
+        <label for="activite5-toggle" class="close-btn">&times;</label>
+        <div class="popup-content">
+            <h3>Contrôle et évaluation des solutions de communication</h3>
+              <!-- Liste des productions -->
+            <div class="productions-list">
+                <button class="production-btn " data-production="production1.5">Production 1</button>
+            </div>
+
+            <div class="production-gallery" id="production1.5">
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="images/IMG_0560.jpg" alt="Production 1- Image 1">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/IMG_0561.jpg" alt="Production 1- Image 2">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/IMG_0562.jpg" alt="Production 1- Image 3">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/IMG_0563.jpg" alt="Production 1- Image 4">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/IMG_0564.jpg" alt="Production 1- Image 5">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>         
+    </section>
+        
+        
+    <!-- Fiches -->
+    <section id="fiches">
+        <h2>MES FICHES PROJETS</h2>
+        <div class="fiches-grid">
+            <!-- Fiche 1 comme bouton image -->
+            <label for="fiche1-toggle" class="fiche-card-image">
+                <img src="images/file1.jpg" alt="Fiche #1">
+            </label>
+
+            <!-- Popup Fiche 1 -->
+            <input type="checkbox" id="fiche1-toggle" class="popup-toggle">
+            <div class="popup-overlay">
+                <label for="fiche1-toggle" class="close-btn">&times;</label>
+                <div class="popup-content">
+                    <h3>Fiche #1</h3>
+                    <div class="fiche-content">
+                        <!-- Contenu de votre fiche 1 ici -->
+                        <p>Création de l'identité visuelle d'une agence de communication fictive</p>
+                        <div class="image-gallery">
+                            <div class="image-container">
+                                <img src="images/MOODBOARD SPORTIVE'EVENTS.png" alt="Image 1">
+                                <div class="image-caption">MOODBOARD SPORTIVE'EVENTS</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/INFOGRAPHIE.png" alt="Image 2">
+                                <div class="image-caption">INPHOGRAPHIE</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 1.png" alt="Production 1- Image 1">
+                                <div class="image-caption">LOGOTYPE.1</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 2.png" alt="Production 1 - Image 2">
+                                <div class="image-caption">LOGOTYPE.2</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 3.png" alt="Production 1 - Image 3">
+                                <div class="image-caption">LOGOTYPE.3</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 4.png" alt="Production 1 - Image 4">
+                                <div class="image-caption">LOGOTYPE.4</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 5.png" alt="Production 1 - Image 5">
+                                <div class="image-caption">LOGOTYPE.5</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 6.png" alt="Production 1 - Image 6">
+                                <div class="image-caption">LOGOTYPE.6</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 7.png" alt="Production 1 - Image 7">
+                                <div class="image-caption">LOGOTYPE.7</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/LOGOTYPE 8.png" alt="Production 1 - Image 8">
+                                <div class="image-caption">LOGOTYPE.8</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 1.png" alt="Scoring- 1">
+                                <div class="image-caption">SCORING.1</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 2.png" alt="Scoring- 2">
+                                <div class="image-caption">SCORING.2</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 3.png" alt="Scoring- 3">
+                                <div class="image-caption">SCORING.3</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 4.png" alt="Scoring- 4">
+                                <div class="image-caption">SCORING.4</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/SCORING 5.png" alt="Scoring- 5">
+                                <div class="image-caption">SCORING.5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fiche 2 comme bouton image -->
+            <label for="fiche2-toggle" class="fiche-card-image">
+                <img src="images/file2.jpg" alt="Fiche #2">
+                
+            </label>
+
+            <!-- Popup Fiche 2 -->
+            <input type="checkbox" id="fiche2-toggle" class="popup-toggle">
+            <div class="popup-overlay">
+                <label for="fiche2-toggle" class="close-btn">&times;</label>
+                <div class="popup-content">
+                    <h3>Fiche #2</h3>
+                    <div class="fiche-content">
+                        
+                        <p>Compagne de communication pour l'ouverture d'un nouveau restaurant BANGCOOK</p>
+                        <div class="image-gallery">
+                            <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/Concours mercostar.MP4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption"> Vidéo fiche 2.1 "Concours MERCOSTAR"</div>
+                            </div>
+                             <div class="image-container">
+                            <img src="images/IMG_0587 (1).JPG" alt="Production #- Image 1">
+                            <div class="image-caption">Production #.1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fiche 3 comme bouton image -->
+            <label for="fiche3-toggle" class="fiche-card-image">
+                <img src="images/file3j.jpg" alt="Fiche #3">
+            </label>
+
+            <!-- Popup Fiche 3 -->
+            <input type="checkbox" id="fiche3-toggle" class="popup-toggle">
+            <div class="popup-overlay">
+                <label for="fiche3-toggle" class="close-btn">&times;</label>
+                <div class="popup-content">
+                    <h3>Fiche #3</h3>
+                    <div class="fiche-content">
+                        <!-- Contenu de votre fiche 3 ici -->
+                        <p>Collaboration entre l'annonceur BANGCOOK et l'agence de communication Dystinct Agency</p>
+                        <div class="image-gallery">
+                            <div class="image-container">
+                                <img src="images/IMG_0557.jpg" alt="Production #- Image 1">
+                                <div class="image-caption">Production #.1</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_0558.jpg" alt="Production €- Image 2">
+                                <div class="image-caption">Production #.2</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_8904_page-0001.jpg" alt="Production 15- Image 1">
+                                <div class="image-caption">Production #.1</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_0560.jpg" alt="Production 16- Image 1">
+                                <div class="image-caption">Production #.1</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_0561.jpg" alt="Production 16- Image 2">
+                                <div class="image-caption">Production #.2</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_0562.jpg" alt="Production 16- Image 3">
+                                <div class="image-caption">Production #.3</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_0563.jpg" alt="Production 16- Image 4">
+                                <div class="image-caption">Production #.4</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/IMG_0564.jpg" alt="Production 16- Image 5">
+                                <div class="image-caption">Production #.5</div>
+                            </div>  
+                            <div class="image-container">
+                                <img src="images/Brief Shooting _page-0001.jpg" alt="Production 23- Image 1">
+                                <div class="image-caption">Production #.1</div>
+                            </div>    
+                            <div class="image-container">
+                                <img src="images/Brief Shooting _page-0002.jpg" alt="Production 23- Image 2">
+                                <div class="image-caption">Production #.2</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/Brief Shooting _page-0003.jpg" alt="Production 23- Image 3">
+                                <div class="image-caption">Production #.3</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/Brief Shooting _page-0004.jpg" alt="Production 23- Image 4">
+                                <div class="image-caption">Production #.4</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/Brief Shooting _page-0005.jpg" alt="Production 23- Image 5">
+                                <div class="image-caption">Production #.5</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/Brief Shooting _page-0006.jpg" alt="Production 23- Image 6">
+                                <div class="image-caption">Production #.6</div>
+                            </div>    
+                            <div class="image-container">
+                                <img src="images/Image 11-06-2025 à 20.57.JPG" alt="mail">
+                                
+                            </div>                 
+                            
+                            <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/VIDEO-2024-06-25-11-25-40.mov" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption"> vidéo#.1</div>
+                            </div>
+                            <div class="image-container">
+                                <video controls class="fiche-video">
+                                    <source src="images/3EC36266-69B7-4FC4-A1A3-3C0FDC613D58.mov" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                <div class="image-caption"> vidéo#.2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>ME CONTACTER</h2>
+            <div class="contact-content">
+                <p><i class="fas fa-envelope"></i>Saad.Kdpro@gmail.com</p>
+                <div class="social-links">
+                    
+                    <a href="https://www.linkedin.com/in/saad-kaddouri-837690292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024  Saad - Tous droits réservés</p>
+        </footer>
+        <!-- Overlay pour le zoom d'image -->
+    <div id="imageZoomOverlay" class="image-zoom-overlay">
+        <span class="close-zoom">&times;</span>
+        <div class="zoomed-image-container">
+            <img id="zoomedImage" class="zoomed-image" src="" alt="">
+            <div id="zoomedImageCaption" class="zoomed-image-caption"></div>
+        </div>
+    </div>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestion des productions
+        const productionBtns = document.querySelectorAll('.production-btn');
+        const productionGalleries = document.querySelectorAll('.production-gallery');
+        
+        productionBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Retire la classe active de tous les boutons et galeries
+                productionBtns.forEach(b => b.classList.remove('active'));
+                productionGalleries.forEach(g => g.classList.remove('active'));
+                
+                // Ajoute la classe active à l'élément cliqué
+                this.classList.add('active');
+                const productionId = this.getAttribute('data-production');
+                document.getElementById(productionId).classList.add('active');
+            });
+        });
+        
+        // Gestion du zoom (identique pour toutes les images)
+        const imageContainers = document.querySelectorAll('.image-container');
+        const zoomOverlay = document.getElementById('imageZoomOverlay');
+        const zoomedImage = document.getElementById('zoomedImage');
+        const zoomedCaption = document.getElementById('zoomedImageCaption');
+        const closeZoom = document.querySelector('.close-zoom');
+        
+        imageContainers.forEach(container => {
+            const img = container.querySelector('img');
+            
+            container.addEventListener('click', function(e) {
+                e.stopPropagation();
+                zoomedImage.src = img.src;
+                zoomedImage.alt = img.alt;
+                zoomedCaption.textContent = img.alt;
+                zoomOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Fermeture du zoom (reste identique)
+        closeZoom.addEventListener('click', function() {
+            zoomOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        zoomOverlay.addEventListener('click', function(e) {
+            if (e.target === zoomOverlay) {
+                zoomOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && zoomOverlay.classList.contains('active')) {
+                zoomOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

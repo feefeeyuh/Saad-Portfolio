@@ -1,0 +1,996 @@
+:root {
+    /* Votre nouvelle palette ultra foncée */
+    --bole: #774936ff;
+    --bole-2: #6e4230ff;
+    --bole-3: #653a2aff;
+    --caput-mortuum: #5c3324ff;
+    --caput-mortuum-2: #532c1eff;
+    --caput-mortuum-3: #4a2419ff;
+    --black-bean: #411d13ff;
+    --black-bean-2: #38160dff;
+    --black-bean-3: #2f0e07ff;
+    --black-bean-4: #260701ff;
+
+    /* Adaptation de la structure existante */
+    --old-rose: var(--black-bean-3);
+    --linen: #f5f5f5; /* Blanc cassé pour meilleure lisibilité */
+    --rose-taupe: var(--black-bean-4); /* La couleur la plus foncée */
+    --dun: var(--caput-mortuum-2); 
+    --cinereous: var(--bole);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.7;
+}
+
+/* ========== HEADER ========== */
+header {
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Nouveau - hauteur pleine écran */
+    /* Conserve le dégradé comme fallback si la vidéo ne charge pas */
+    background: linear-gradient(135deg, #000000, #434343);
+}
+
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    
+    /* Nouvelle propriété pour descendre le cadre */
+    margin-top: 15vh; /* Ajustez cette valeur (10vh-25vh) selon vos besoins */
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .header-content {
+        margin-top: 10vh; /* Valeur plus petite sur mobile */
+    }
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    /* Nouveau - ombre de texte */
+    text-shadow: 0 2px 10px rgba(19, 19, 19, 0.5);
+    /* Conserve les styles existants */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    /* Nouveau - ombre de texte */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.notification-banner {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    /* S'assure qu'il reste visible sur la vidéo */
+    position: relative;
+    z-index: 3;
+}
+
+.notif-btn {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.notif-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+/* Overlay optionnel pour assombrir la vidéo */
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(67,67,67,0.2));
+    z-index: 1;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+    display: flex;
+    justify-content: center;
+    background: var(--rose-taupe); /* Changement ici */
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: var(--linen); /* Texte en linen pour contraste */
+    margin: 0 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s; /* Changé de color à all */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--dun); /* Ligne hover en dun */
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: var(--linen);
+    transform: translateY(-2px); /* Ajout d'un léger effet */
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ========== SECTIONS ========== */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background:var(--cinereous);
+    margin: 1rem auto;
+}
+
+/* Nouveaux styles CSS à ajouter */
+
+/* Conteneur À propos */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Moodboard avec effet parallax */
+.moodboard-parallax {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.moodboard-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.moodboard-parallax:hover .moodboard-image {
+    transform: scale(1.05);
+}
+
+.moodboard-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    text-align: center;
+}
+
+.moodboard-overlay span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.moodboard-parallax:hover .moodboard-overlay span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Boîte bio */
+.bio-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bio-content {
+    position: relative;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.bio-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    position: relative;
+    z-index: 2;
+}
+
+.bio-content::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, var(--old-rose), var(--dun));
+    z-index: -1;
+    border-radius: 12px;
+    opacity: 0.7;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .moodboard-parallax {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .bio-box {
+        max-width: 95%;
+        margin-top: -30px;
+        padding: 1.5rem;
+    }
+    
+    .bio-content {
+        padding: 1rem;
+    }
+    
+    .bio-content p {
+        font-size: 1rem;
+    }
+}
+/* ========== ACTIVITÉS ========== */
+#activites {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.activites-container {
+    background: linear-gradient(135deg, #f9eae1ff, #d1be9cff);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.activites-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.activite-card {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.activite-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 3px solid white;
+    transition: all 0.3s ease;
+}
+
+.activite-card:hover {
+    transform: translateY(-10px);
+}
+
+.activite-card:hover img {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: #7d4f50ff;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .activites-grid {
+        gap: 1.5rem;
+    }
+    
+    .activite-card {
+        width: 150px;
+    }
+}
+/* ========== FICHES ========== */
+.fiches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fiche-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.fiche-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #ffcc00;
+}
+
+.fiche-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.fiche-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ========== CONTACT ========== */
+#contact {
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        padding: 0.8rem;
+    }
+    
+    nav a {
+        margin: 0 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .moodboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+}
+/* Styles pour les popups */
+.popup-toggle {
+    display: none;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.popup-toggle:checked + .popup-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    max-width: 1200px;
+    margin: 60px auto 20px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--old-rose);
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-gallery img {
+        height: 200px;
+    }
+    
+    .popup-content {
+        padding: 50px 15px 15px;
+    }
+    
+    .close-btn {
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+/* Style pour le popup avec grande image unique */
+.popup-large-image .single-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 20px;
+}
+
+.popup-large-image .single-image-container img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .popup-large-image .single-image-container {
+        height: 50vh;
+    }
+    
+    .popup-large-image .single-image-container img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+}
+/* Styles pour le zoom d'image amélioré */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol normal */
+.image-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Overlay plein écran */
+.image-zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.image-zoom-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.zoomed-image-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
+.zoomed-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+}
+
+.zoomed-image-caption {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.close-zoom {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 3001;
+    transition: transform 0.3s ease;
+}
+
+.close-zoom:hover {
+    transform: rotate(90deg);
+    color: var(--old-rose);
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .zoomed-image {
+        max-height: 70vh;
+    }
+    
+    .close-zoom {
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+    }
+    
+    .zoomed-image-caption {
+        font-size: 1rem;
+        bottom: -30px;
+    }
+}
+/* Styles pour les productions */
+.productions-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.production-btn {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid var(--old-rose);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.production-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.production-btn.active {
+    background: var(--old-rose);
+    color: white;
+    font-weight: bold;
+}
+
+.production-gallery {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.production-gallery.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Styles pour les fiches projets */
+.fiches-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fiche-card-image {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.fiche-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 3px solid white;
+    transition: all 0.3s ease;
+}
+
+.fiche-card-image:hover {
+    transform: translateY(-10px);
+}
+
+.fiche-card-image:hover img {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: #7d4f50ff;
+}
+
+.fiche-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fiche-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #ffcc00;
+}
+
+.fiche-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .fiches-grid {
+        gap: 1.5rem;
+    }
+    
+    .fiche-card-image, .fiche-card {
+        width: 150px;
+    }
+}
+/* Style pour les légendes d'images */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px; /* Ajout d'espace pour la légende */
+}
+
+.image-caption {
+    position: absolute;
+    bottom: -5px; /* Position sous l'image */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 0;
+    background: var(--cinereous); /* rose-taupe avec transparence */
+    border-radius: 0 0 8px 8px;
+}
+
+/* Pour les popups de fiches */
+.popup-content .image-container {
+    margin-bottom: 30px; /* S'assure qu'il y a de la place pour la légende */
+}
+
+.popup-content .image-caption {
+    color: white;
+    background: var(--cinereous); /* rgba(125, 79, 80, 0.8)rose-taupe avec transparence */
+}
+/* Ajoutez ceci à votre fichier CSS */
+.fiche-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pour le zoom */
+.image-zoom-overlay .fiche-video {
+    max-width: 80vw;
+    max-height: 80vh;
+    border: 3px solid white;
+}
+/* ========== PARCOURS ========== */
+#parcours {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+/* Adjust the margin-top for the bio-box specifically within the #parcours section */
+#parcours .bio-box {
+    margin-top: 5px; /* Increased negative margin to move it higher */
+}
+
+/* You might also want to adjust the margin-bottom of the h2 in #parcours for closer proximity */
+#parcours h2 {
+    margin-bottom: 2rem; /* Reduced margin to bring content closer */
+}
+/* ========== PROJET ========== */
+#projet {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+/* Adjust the margin-top for the bio-box specifically within the #parcours section */
+#projet .bio-box {
+    margin-top: 5px; /* Increased negative margin to move it higher */
+}
+
+/* You might also want to adjust the margin-bottom of the h2 in #parcours for closer proximity */
+#projet h2 {
+    margin-bottom: 2rem; /* Reduced margin to bring content closer */
+}
+
+/* ========== COMPETENCES ========== */
+#competences {
+    background-color: #f8f9fa5d;
+    padding: 4rem 2rem;
+}
+
+.competences-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.competence-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.competence-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.competence-image {
+    width: 100%;
+    height: 100%;
+}
+
+.competence-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.competence-card:hover .competence-image img {
+    transform: scale(1.1);
+}
+
+.competence-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent,rgba(134, 112, 112, 0.993));
+    color: white;
+    padding: 2rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.competence-card:hover .competence-overlay {
+    transform: translateY(0);
+}
+
+.competence-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.competence-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .competence-card {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .competence-overlay {
+        padding: 1.5rem 1rem;
+    }
+    
+    .competence-overlay h3 {
+        font-size: 1.3rem;
+    }
+}
